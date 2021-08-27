@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="utility.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id=root>
+    <div class="splitter-logo-img">
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="cont-top">
+      <div class="tip-calc-wrap flex-center">
+        <div class="tip-calc-left-wrap flex-col">
+          <div class="l-billfield">
+            <p class="l-t">Bill</p>
+            <input onchange="billnpeep()" class="bg-ritual" type="text" name="amount" placeholder="0">
+          </div>
+          <div class="l-sharefield">
+            <p class="l-t">Select Tip %</p>
+            <div class="grid-2-4">
+              <input onclick="shareCount(0.05,0)" class="share-option dark-bg" type="text" value="5%" readonly>
+              <input onclick="shareCount(0.1,1)" class="share-option dark-bg" type="text" value="10%" readonly>
+              <input onclick="shareCount(0.15,2)" class="share-option dark-bg" type="text" value="15%" readonly>
+              <input onclick="shareCount(0.25,3)" class="share-option dark-bg" type="text" value="25%" readonly>
+              <input onclick="shareCount(0.5,4)" class="share-option dark-bg" type="text" value="50%" readonly>
+              <input onchange="shareCount(0,5)" class="share-option custom" type="text" placeholder="Custom" contenteditable="true">
+            </div>
+          </div>
+          <div class="l-peoplefield">
+            <div class="flex l-t-cont" style="justify-content:space-between;">
+              <p class="l-t">Number of People</p>
+              <p style="color:red;" class="auth l-t">Can't be zero</p>
+            </div>
+            <input onchange="billnpeep()" class="bg-ritual" type="text" name="peopleCount" placeholder="0">
+          </div>
+        </div>
+        <div class="tip-calc-right-wrap dark-bg">
+          <div class="right-op-field">
+            <div class="flex tip-amt">
+              <div class="field-label"><span class="l-t">Tip Amount </span><span class="label-sub">/ person</span></div>
+              <div class="op-field">$0.00</div>
+            </div>
+            <div class="flex total-person">
+              <div class="field-label"><span class="l-t">Total</span><span class="label-sub">/ person</span></div>
+              <div class="op-field">$0.00</div>
+            </div>
+          </div>
+          <div class="right-reset-button">
+            <input onclick="location.reload()" type="button" value="RESET"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="index.js" >
+  </script>
+</body>
+</html>
+
+
+
+
+
+
